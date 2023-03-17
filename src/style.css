@@ -1,0 +1,116 @@
+
+/* mobile */
+body{
+    padding: 3rem 0;
+    background: hsl(273, 75%, 66%);
+    background: linear-gradient(180deg, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 88%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 41.6875rem;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 80%;
+    background-color: hsl(0, 0%, 100%);
+    padding: 0 1rem 2rem;
+    border-radius: 1.3rem;
+    margin-top: 6rem;
+}
+.container .img__mobile{
+    position: absolute;
+    align-self: center;
+    top: 60px;
+    height: 180px;
+}
+
+.container .box__img {
+   display: flex;
+   justify-content: center;
+   margin-bottom: 2rem;
+}
+
+
+.container .box__text h1{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(240, 5%, 91%);
+    margin: 1.5rem 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+.item :hover{
+    color: hsl(14, 88%, 65%);
+    cursor: pointer;
+}
+.item img{
+    height: 9px;
+    width: 11px;
+}
+
+.desktop, .img__desktop, .box{
+    display:none;
+}
+
+/* desktop */
+
+@media (min-width: 1500px) {
+    .img__mobile, .mobile{
+        display: none;
+    }
+    .desktop, .img__desktop, .box{
+        display: block;
+    }
+    .desktop{
+        position: absolute;
+        right: 30%;
+        top: 60%;
+        transform: translate(-30%, -60%);
+    }
+    .img__desktop{
+        position: absolute;
+        height: 350px;
+        z-index: 1;
+        right: 40%;
+        top: 60%;
+        transform: translate(-40%, -60%);
+    }
+    .box{
+        z-index: 2;
+        position: fixed;
+        right: 67.5%;
+        top: 60%;
+        transform: translate(-67.5%, -60%);
+    }
+    .container{
+        position: relative;
+        flex-direction: row;
+        max-width: 60%;
+        min-height: 400px;
+        overflow: hidden;
+        padding: 4rem 0 0 0;
+    }
+    .container .box__text h1{
+        text-align: left;
+    }
+    .box__text{
+        padding-right: 4rem;
+        width: 40%;
+    }
+    body{
+        padding: 0;
+    }
+}
