@@ -49,22 +49,20 @@ for (var i = 0; i< list.length; i++) {
     boxH2.className= "title";
     boxP.className= "description";
 
-    
-    boxP.style.display = "none";
-    var visibilidade = false;
 
     obj.onclick = function (){
+        const items = document.getElementsByClassName("item");
         
-        if(!visibilidade){
-            boxP.style.display = "block";
-            h2.style.fontWeight = "bold";
-            img.style.transform = "rotate(180deg)";
-            visibilidade = true;
+        for(let i = 0; i < items.length; i++) {
+            if(obj != items[i] && items[i].classList.contains("show")){
+                items[i].classList.remove("show"); // Esconder
+            }
+        }
+
+        if(!obj.classList.contains("show")){
+            obj.classList.add("show")
         } else{
-            boxP.style.display = "none";
-            h2.style.fontWeight = "normal";
-            img.style.transform = "rotate(0deg)";
-            visibilidade= false;
+            obj.classList.remove("show");
         }
     }
 

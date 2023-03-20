@@ -19,6 +19,7 @@ main{
     justify-content: space-between;
     flex-direction: column;
     width: 80%;
+    max-height: 500px;
     background-color: hsl(0, 0%, 100%);
     padding: 0 1rem 2rem;
     border-radius: 1.3rem;
@@ -66,21 +67,21 @@ main{
     cursor: pointer;
 }
 .description {
+    display: none;
     padding: 0.5rem 0;
     font-size: .85rem;
     color: hsl(240, 6%, 50%);
 
 }
-/* .show{
-    display: block;
-    font-weight: bold;
+.show .title img{
     transform: rotate(180deg);
 }
-.hidden{
-    display : none;
-    font-weight: normal;
-     transform : rotate(0deg);
-} */
+.show .title h2{
+    font-weight: bold;
+}
+.show .description{
+    display : block;
+}
 .item img{
     height: 9px;
     width: 11px;
@@ -88,7 +89,14 @@ main{
 .desktop, .img__desktop, .box{
     display:none;
 }
-
+.attribution{
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
 /* desktop */
 
 @media (min-width: 1500px) {
@@ -114,7 +122,7 @@ main{
     }
     .box{
         z-index: 2;
-        position: fixed;
+        position: absolute;
         right: 67.5%;
         top: 60%;
         transform: translate(-67.5%, -60%);
@@ -123,7 +131,8 @@ main{
         position: relative;
         flex-direction: row;
         max-width: 60%;
-        min-height: 400px;
+        height: 400px;
+        max-height: 400px;
         overflow: hidden;
         padding: 4rem 0 0 0;
     }
@@ -137,4 +146,5 @@ main{
     body{
         padding: 0;
     }
+    
 }
