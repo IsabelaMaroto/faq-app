@@ -1,5 +1,6 @@
 
 /* mobile */
+
 body{
     padding: 3rem 0;
     background: hsl(273, 75%, 66%);
@@ -42,9 +43,11 @@ main{
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 3rem;
+    color: hsl(238, 29%, 16%);
 }
 .item{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding-bottom: 1rem;
     border-bottom: 1px solid hsl(240, 5%, 91%);
@@ -52,15 +55,36 @@ main{
     font-size: 15px;
     font-weight: 400;
 }
-.item :hover{
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: hsl(237, 12%, 33%);
+}
+.title:hover{
     color: hsl(14, 88%, 65%);
     cursor: pointer;
 }
+.description {
+    padding: 0.5rem 0;
+    font-size: .85rem;
+    color: hsl(240, 6%, 50%);
+
+}
+/* .show{
+    display: block;
+    font-weight: bold;
+    transform: rotate(180deg);
+}
+.hidden{
+    display : none;
+    font-weight: normal;
+     transform : rotate(0deg);
+} */
 .item img{
     height: 9px;
     width: 11px;
 }
-
 .desktop, .img__desktop, .box{
     display:none;
 }
